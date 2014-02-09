@@ -45,6 +45,10 @@ client.on('ticker', function(ticker) {
   lastTickerVolume = ticker.vol;
 });
 
+client.on('result', function(result) {
+  console.log(timeFormat(), result);
+});
+
 process.on('exit', function() {
   console.log('Goodbye!'.bold);
   client.close();
