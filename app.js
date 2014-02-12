@@ -1,8 +1,8 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-var mtgox = require('mtgox'),
+var mtgox = require('./lib/mtgox'),
   client = mtgox.connect(),
-  formatting = require('./node_modules/mtgox/console-formatting'),
+  formatting = require('./lib/console-formatting'),
   tradeFormat = formatting.getTradeFormat,
   priceFormat = formatting.getPriceFormat,
   tickerFormat = formatting.getTickerFormat,
